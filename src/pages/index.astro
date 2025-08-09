@@ -1,54 +1,7 @@
 ---
-
-import Header from '../components/Header.astro';
-import Footer from '../components/footer.astro';
-import '../styles/globals.css';
-const inicio ='inicio'
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const { pageTitle } = Astro.props;
 ---
-
-
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{inicio}</title>
-  </head>
-  <body>
-    
-    
-      <Header/>
-
-    <h1>{inicio}</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, facere
-      iusto mollitia voluptate ipsa blanditiis minus eius, delectus
-      necessitatibus cumque enim provident, tempore nobis itaque impedit tenetur
-      consequuntur voluptatibus? Pariatur, eaque! Ratione, saepe perferendis. Et
-      corrupti quasi doloribus minima est?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, facere
-      iusto mollitia voluptate ipsa blanditiis minus eius, delectus
-      necessitatibus cumque enim provident, tempore nobis itaque impedit tenetur
-      consequuntur voluptatibus? Pariatur, eaque! Ratione, saepe perferendis. Et
-      corrupti quasi doloribus minima est?
-    </p>
-
-    <Footer />
-
-
-
-
-
-      
-  
-   <script>
-   import "../scripts/menu.js";
-   </script>
-  </body>
-</html>
-
+<BaseLayout pageTitle={pageTitle}>
+  <h2>Aquí debe ir un subtítulo del blog</h2>
+</BaseLayout>
